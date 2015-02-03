@@ -27,6 +27,8 @@ using System.Runtime.InteropServices;
 
 namespace Accord.Extensions.Imaging
 {
+    using System.Linq;
+
     /// <summary>
     /// Contains image helper methods.
     /// </summary>
@@ -129,7 +131,7 @@ namespace Accord.Extensions.Imaging
         private static Func<IImage> getGenericImageConstructor(Type objectType, ColorInfo colorInfo)
         {
             var genericClassType = objectType.MakeGenericType(colorInfo.ColorType, colorInfo.ChannelType);
-            var ctor = genericClassType.GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic, null, System.Type.EmptyTypes, null);
+            var ctor = genericClassType.GetTypeInfo().DeclaredConstructors.Single(c => !c.IsStatic && c.GetParameters().Length == 0);
             var ctorInvoker = Expression.Lambda<Func<IImage>>(Expression.New(ctor)).Compile();
 
             return ctorInvoker;
