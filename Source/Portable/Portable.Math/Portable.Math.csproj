@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82F52E4E-59B2-42ED-8EBE-A44BE0D1536D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portable.Math</RootNamespace>
+    <AssemblyName>Portable.Math</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="..\..\..\Source\Math\Math\Extensions\BranchAndBoundAssigment.cs">
+      <Link>Extensions\BranchAndBoundAssigment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Extensions\MathExtensions.cs">
+      <Link>Extensions\MathExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Extensions\MatrixExtensions.cs">
+      <Link>Extensions\MatrixExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\FFT\FFT.Core.cs">
+      <Link>FFT\FFT.Core.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\FFT\FFT.Float.cs">
+      <Link>FFT\FFT.Float.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Angle.cs">
+      <Link>Geometry\Angle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Contour\CardinalSpline.cs">
+      <Link>Geometry\Contour\CardinalSpline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Contour\ContourExtensions.cs">
+      <Link>Geometry\Contour\ContourExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Extensions\PointExtensions.cs">
+      <Link>Geometry\Extensions\PointExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Extensions\RangeExtensions.cs">
+      <Link>Geometry\Extensions\RangeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Extensions\RectangleExtensions.cs">
+      <Link>Geometry\Extensions\RectangleExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Extensions\SizeExtensions.cs">
+      <Link>Geometry\Extensions\SizeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Graph\Edge.cs">
+      <Link>Geometry\Graph\Edge.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Graph\GraphBaseExtensions.cs">
+      <Link>Geometry\Graph\GraphBaseExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Graph\GraphSearchExtensions.cs">
+      <Link>Geometry\Graph\GraphSearchExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\GroupMatching\Clustering.cs">
+      <Link>Geometry\GroupMatching\Clustering.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\GroupMatching\RectangleClustering.cs">
+      <Link>Geometry\GroupMatching\RectangleClustering.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\PointTransformation\PointTransfromationsExtensions.cs">
+      <Link>Geometry\PointTransformation\PointTransfromationsExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\PointTransformation\Transfroms2D.cs">
+      <Link>Geometry\PointTransformation\Transfroms2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Structures\Box2D.cs">
+      <Link>Geometry\Structures\Box2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Structures\Circle.cs">
+      <Link>Geometry\Structures\Circle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Structures\CircleF.cs">
+      <Link>Geometry\Structures\CircleF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Structures\Ellipse.cs">
+      <Link>Geometry\Structures\Ellipse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Structures\Point%271.cs">
+      <Link>Geometry\Structures\Point%271.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Geometry\Structures\Vector2D.cs">
+      <Link>Geometry\Structures\Vector2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\MoreLinq\MoreEnumerable.ForEach.cs">
+      <Link>MoreLinq\MoreEnumerable.ForEach.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\MoreLinq\MoreEnumerable.MinBy.cs">
+      <Link>MoreLinq\MoreEnumerable.MinBy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Structures\Complex.cs">
+      <Link>Structures\Complex.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Source\Math\Math\Structures\ComplexF.cs">
+      <Link>Structures\ComplexF.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\Portable\Portable.Core\Portable.Core.csproj">
+      <Project>{f45893be-b481-496a-b5b7-32fb1287349e}</Project>
+      <Name>Portable.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50203\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
