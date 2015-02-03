@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEC42FFA-B703-485E-B38E-E5C7AF938071}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portable.Imaging.GenericImage</RootNamespace>
+    <AssemblyName>Portable.Imaging.GenericImage</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorDepthConverter.cs">
+      <Link>ColorTypeConversions\ColorDepthConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorDepthConverters.cs">
+      <Link>ColorTypeConversions\ColorDepthConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorSpaces\Bgr.cs">
+      <Link>ColorTypeConversions\ColorSpaces\Bgr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorSpaces\Bgra.cs">
+      <Link>ColorTypeConversions\ColorSpaces\Bgra.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorSpaces\ColorInfo.cs">
+      <Link>ColorTypeConversions\ColorSpaces\ColorInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorSpaces\Gray.cs">
+      <Link>ColorTypeConversions\ColorSpaces\Gray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorSpaces\Hsv.cs">
+      <Link>ColorTypeConversions\ColorSpaces\Hsv.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\ColorSpaces\IColor.cs">
+      <Link>ColorTypeConversions\ColorSpaces\IColor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Color\BgraBgrConverters.cs">
+      <Link>ColorTypeConversions\Converters\Color\BgraBgrConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Color\BgrGrayConverters.cs">
+      <Link>ColorTypeConversions\Converters\Color\BgrGrayConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Color\BgrHsvConverters.cs">
+      <Link>ColorTypeConversions\Converters\Color\BgrHsvConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Color\GrayComplexConverters.cs">
+      <Link>ColorTypeConversions\Converters\Color\GrayComplexConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Depth\FromByteDepthConverters.cs">
+      <Link>ColorTypeConversions\Converters\Depth\FromByteDepthConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Depth\FromDoubleDepthConverters.cs">
+      <Link>ColorTypeConversions\Converters\Depth\FromDoubleDepthConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Depth\FromFloatDepthConverters.cs">
+      <Link>ColorTypeConversions\Converters\Depth\FromFloatDepthConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Depth\FromIntDepthConverters.cs">
+      <Link>ColorTypeConversions\Converters\Depth\FromIntDepthConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\ColorTypeConversions\Converters\Depth\FromShortDepthConverters.cs">
+      <Link>ColorTypeConversions\Converters\Depth\FromShortDepthConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Basic\ClearImage.cs">
+      <Link>Extensions\Basic\ClearImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Basic\ColorConversions.cs">
+      <Link>Extensions\Basic\ColorConversions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Basic\ConditionalCopy.cs">
+      <Link>Extensions\Basic\ConditionalCopy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Basic\ImageFlipping.cs">
+      <Link>Extensions\Basic\ImageFlipping.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Basic\PixelSetter.cs">
+      <Link>Extensions\Basic\PixelSetter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Interop\ArrayInterop\ArrayToImageExtensions.cs">
+      <Link>Extensions\Interop\ArrayInterop\ArrayToImageExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Interop\ArrayInterop\ImageToArrayExtensions.cs">
+      <Link>Extensions\Interop\ArrayInterop\ImageToArrayExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Extensions\Interop\OpenCVInterop\IplImageConversions.cs">
+      <Link>Extensions\Interop\OpenCVInterop\IplImageConversions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Helper\HelperMethods.cs">
+      <Link>Helper\HelperMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Image\CoreExtensions\ChannelMerger.cs">
+      <Link>Image\CoreExtensions\ChannelMerger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Image\CoreExtensions\ChannelSplitter.cs">
+      <Link>Image\CoreExtensions\ChannelSplitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Image\CoreExtensions\ValueSetter.cs">
+      <Link>Image\CoreExtensions\ValueSetter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Image\Core\IImage.cs">
+      <Link>Image\Core\IImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Image\Core\Image%271.cs">
+      <Link>Image\Core\Image%271.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Image\Core\Image.cs">
+      <Link>Image\Core\Image.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\MoreLinq\MoreEnumerable.ForEach.cs">
+      <Link>MoreLinq\MoreEnumerable.ForEach.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\MoreLinq\MoreEnumerable.MinBy.cs">
+      <Link>MoreLinq\MoreEnumerable.MinBy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\MoreLinq\MoreEnumerable.Pairwise.cs">
+      <Link>MoreLinq\MoreEnumerable.Pairwise.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.GenericImage\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50203\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Portable.Core\Portable.Core.csproj">
+      <Project>{f45893be-b481-496a-b5b7-32fb1287349e}</Project>
+      <Name>Portable.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Math\Portable.Math.csproj">
+      <Project>{82f52e4e-59b2-42ed-8ebe-a44be0d1536d}</Project>
+      <Name>Portable.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

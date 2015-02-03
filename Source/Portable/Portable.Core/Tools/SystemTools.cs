@@ -6,7 +6,7 @@
 // contacts@aforgenet.com
 //
 
-namespace Accord.Extensions
+namespace AForge
 {
     using System;
 
@@ -19,7 +19,7 @@ namespace Accord.Extensions
     /// implementation is different on different platform, like .NET and Mono.</para>
     /// </remarks>
     /// 
-    internal static class SystemTools
+    public static class SystemTools
     {
         /// <summary>
         /// Copy block of unmanaged memory.
@@ -35,7 +35,7 @@ namespace Accord.Extensions
         /// not provide any way to copy unmanaged blocks, but provides only methods to
         /// copy from unmanaged memory to managed memory and vise versa.</para></remarks>
         ///
-        internal static IntPtr CopyUnmanagedMemory( IntPtr dst, IntPtr src, int count )
+        public static IntPtr CopyUnmanagedMemory( IntPtr dst, IntPtr src, int count )
         {
             unsafe
             {
@@ -58,7 +58,7 @@ namespace Accord.Extensions
         /// not provide any way to copy unmanaged blocks, but provides only methods to
         /// copy from unmanaged memory to managed memory and vise versa.</para></remarks>
         /// 
-        private static unsafe byte* CopyUnmanagedMemory( byte* dst, byte* src, int count )
+        public static unsafe byte* CopyUnmanagedMemory( byte* dst, byte* src, int count )
         {
             int countUint = count >> 2;
             int countByte = count & 3;
@@ -91,7 +91,7 @@ namespace Accord.Extensions
         /// 
         /// <returns>Return's value of <paramref name="dst"/> - pointer to destination.</returns>
         /// 
-        internal static IntPtr SetUnmanagedMemory( IntPtr dst, int filler, int count )
+        public static IntPtr SetUnmanagedMemory( IntPtr dst, int filler, int count )
         {
             unsafe
             {
@@ -110,7 +110,7 @@ namespace Accord.Extensions
         /// 
         /// <returns>Return's value of <paramref name="dst"/> - pointer to destination.</returns>
         /// 
-        private static unsafe byte* SetUnmanagedMemory( byte* dst, int filler, int count )
+        public static unsafe byte* SetUnmanagedMemory( byte* dst, int filler, int count )
         {
             int countUint = count >> 2;
             int countByte = count & 3;

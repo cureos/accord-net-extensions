@@ -63,10 +63,7 @@ namespace Accord.Extensions
             Array = new T[length];
             initialize(Array);
 
-#if !PORTABLE
-            AForge.
-#endif
-            SystemTools.CopyUnmanagedMemory(this.Data, dataSource, this.SizeInBytes);
+            AForge.SystemTools.CopyUnmanagedMemory(this.Data, dataSource, this.SizeInBytes);
         }
 
         private void initialize(T[] array)
