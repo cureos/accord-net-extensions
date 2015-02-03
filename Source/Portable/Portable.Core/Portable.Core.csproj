@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F45893BE-B481-496A-B5B7-32FB1287349E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Extensions.Core</RootNamespace>
+    <AssemblyName>Accord.Extensions</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\Caching\LazyMemoryCache%271.cs">
+      <Link>Caching\LazyMemoryCache%271.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Caching\LRUCache%271.cs">
+      <Link>Caching\LRUCache%271.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Caching\MethodCache.cs">
+      <Link>Caching\MethodCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Collections\CircularList.cs">
+      <Link>Collections\CircularList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Collections\History.cs">
+      <Link>Collections\History.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Collections\IndexedCollection.cs">
+      <Link>Collections\IndexedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Collections\Map.cs">
+      <Link>Collections\Map.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Collections\PinnedArray.cs">
+      <Link>Collections\PinnedArray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Diagnostics\Diagnostics.cs">
+      <Link>Diagnostics\Diagnostics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\BinaryTreeArrayExtensions.cs">
+      <Link>Extensions\BinaryTreeArrayExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\DictionaryMatrixExtensions.cs">
+      <Link>Extensions\DictionaryMatrixExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\Enumerable\Enumerable.IndexOfMax.cs">
+      <Link>Extensions\Enumerable\Enumerable.IndexOfMax.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\Enumerable\Enumerable.IndexOfMin.cs">
+      <Link>Extensions\Enumerable\Enumerable.IndexOfMin.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\Enumerable\Enumerable.Select.cs">
+      <Link>Extensions\Enumerable\Enumerable.Select.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\Enumerable\EnumerableExtensions.cs">
+      <Link>Extensions\Enumerable\EnumerableExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\PathExtensions.cs">
+      <Link>Extensions\PathExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\RandomExtensions.cs">
+      <Link>Extensions\RandomExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\SearchMethods.cs">
+      <Link>Extensions\SearchMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Extensions\SerializationExtensions.cs">
+      <Link>Extensions\SerializationExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Imaging\ColorAttribute.cs">
+      <Link>Imaging\ColorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Imaging\IColor.cs">
+      <Link>Imaging\IColor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\NaturalSortComparer.cs">
+      <Link>NaturalSortComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ParallelProcessing\ParallelExtensions.cs">
+      <Link>ParallelProcessing\ParallelExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ParallelProcessing\ParallelProcessor.cs">
+      <Link>ParallelProcessing\ParallelProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ParallelProcessing\ParallelRandom.cs">
+      <Link>ParallelProcessing\ParallelRandom.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Structures\Geometry\Rectangle.cs">
+      <Link>Structures\Geometry\Rectangle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Structures\Geometry\RectangleF.cs">
+      <Link>Structures\Geometry\RectangleF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Structures\Geometry\Size.cs">
+      <Link>Structures\Geometry\Size.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Structures\Geometry\SizeF.cs">
+      <Link>Structures\Geometry\SizeF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\Structures\Pair%271.cs">
+      <Link>Structures\Pair%271.cs</Link>
+    </Compile>
+    <Compile Include="Tools\SystemTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50203\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
