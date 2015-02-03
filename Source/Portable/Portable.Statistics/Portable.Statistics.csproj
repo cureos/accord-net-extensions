@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DE10955-8608-42F3-86A7-2D64D0B523C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Extensions.Statistics</RootNamespace>
+    <AssemblyName>Accord.Extensions.Statistics</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="..\..\Math\Statistics\Filters\Kalman\Base\KalmanFilter.cs">
+      <Link>Filters\Kalman\Base\KalmanFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\Kalman\Base\KalmanFilterExtensions.cs">
+      <Link>Filters\Kalman\Base\KalmanFilterExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\Kalman\DiscreteKalmanFilter.cs">
+      <Link>Filters\Kalman\DiscreteKalmanFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\MotionModels\ConstantAcceleration2DModel.cs">
+      <Link>Filters\MotionModels\ConstantAcceleration2DModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\MotionModels\ConstantVelocity2DModel.cs">
+      <Link>Filters\MotionModels\ConstantVelocity2DModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\MotionModels\PerspectiveProjection2DModel.cs">
+      <Link>Filters\MotionModels\PerspectiveProjection2DModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\ParticleFilter\Particle.cs">
+      <Link>Filters\ParticleFilter\Particle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\ParticleFilter\ParticleFilter.cs">
+      <Link>Filters\ParticleFilter\ParticleFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\ParticleFilter\ParticleFilter.Methods.cs">
+      <Link>Filters\ParticleFilter\ParticleFilter.Methods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\TrackAssociation\EntropyManagement\EntropyTrackerRemoval.cs">
+      <Link>Filters\TrackAssociation\EntropyManagement\EntropyTrackerRemoval.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\TrackAssociation\EntropyManagement\IEntropyTrack.cs">
+      <Link>Filters\TrackAssociation\EntropyManagement\IEntropyTrack.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\TrackAssociation\JPDAF\JPDAF.Base.cs">
+      <Link>Filters\TrackAssociation\JPDAF\JPDAF.Base.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\TrackAssociation\JPDAF\JPDAF.Kalman.cs">
+      <Link>Filters\TrackAssociation\JPDAF\JPDAF.Kalman.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Filters\TrackAssociation\JPDAF\JPDAF.ParticleFilter.cs">
+      <Link>Filters\TrackAssociation\JPDAF\JPDAF.ParticleFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Median.cs">
+      <Link>Median.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\NthOrderStatistic.cs">
+      <Link>NthOrderStatistic.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\RunningStatistics\RunningAverage.cs">
+      <Link>RunningStatistics\RunningAverage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\RunningStatistics\RunningVariance.cs">
+      <Link>RunningStatistics\RunningVariance.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\RunningStatistics\RunningWeightedAverage.cs">
+      <Link>RunningStatistics\RunningWeightedAverage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Math\Statistics\RunningStatistics\RunningWeightedVariance.cs">
+      <Link>RunningStatistics\RunningWeightedVariance.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50203\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Portable.Core\Portable.Core.csproj">
+      <Project>{f45893be-b481-496a-b5b7-32fb1287349e}</Project>
+      <Name>Portable.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Math\Portable.Math.csproj">
+      <Project>{82f52e4e-59b2-42ed-8ebe-a44be0d1536d}</Project>
+      <Name>Portable.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
