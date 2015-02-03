@@ -24,6 +24,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+#if PORTABLE
+using Path = System.IO.ShimPath;
+#endif
+
 namespace Accord.Extensions
 {
     /// <summary>

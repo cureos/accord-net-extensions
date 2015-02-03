@@ -63,7 +63,10 @@ namespace Accord.Extensions
             Array = new T[length];
             initialize(Array);
 
-            AForge.SystemTools.CopyUnmanagedMemory(this.Data, dataSource, this.SizeInBytes);
+#if !PORTABLE
+            AForge.
+#endif
+            SystemTools.CopyUnmanagedMemory(this.Data, dataSource, this.SizeInBytes);
         }
 
         private void initialize(T[] array)
@@ -79,7 +82,7 @@ namespace Accord.Extensions
         /// </summary>
         public void Dispose()
         {
-            if (handle != null && handle.IsAllocated) //this function is called for the first time
+            if (handle.IsAllocated) //this function is called for the first time
             {
                 handle.Free();
                 this.Array = null;
