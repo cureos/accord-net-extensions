@@ -142,24 +142,22 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accord">
-      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
     </Reference>
     <Reference Include="Accord.Math">
-      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
     </Reference>
     <Reference Include="Accord.Statistics">
-      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.0.50126\lib\portable-net45+netcore45+wpa81+wp8\Accord.Statistics.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Statistics.dll</HintPath>
     </Reference>
     <Reference Include="AForge">
-      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Math">
-      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
     </Reference>
     <Reference Include="Shim">
-      <HintPath>..\..\..\packages\shim.1.0.1.50203\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+      <HintPath>..\..\..\packages\shim.1.0.1.50204\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -135,15 +135,13 @@
     <Compile Include="..\..\Core\Structures\Pair%271.cs">
       <Link>Structures\Pair%271.cs</Link>
     </Compile>
-    <Compile Include="Tools\SystemTools.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AForge">
-      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50126\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
     </Reference>
     <Reference Include="Shim">
-      <HintPath>..\..\..\packages\shim.1.0.1.50203\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\packages\shim.1.0.1.50204\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
