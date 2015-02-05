@@ -180,3 +180,4 @@ $RECYCLE.BIN/
 /Samples/FastTemplateMatchingDemo/Resources/OpenHandLeft_BW_temp/New folder
 *.dll
 *.nupkg
+/packages
