@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A248C990-615E-4F0D-A661-10778D2C98A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Extensions.Imaging</RootNamespace>
+    <AssemblyName>Accord.Extensions.Imaging.Algorithms</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\accord.extensions.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Portable.Core\Portable.Core.csproj">
+      <Project>{f45893be-b481-496a-b5b7-32fb1287349e}</Project>
+      <Name>Portable.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Imaging.AForgeInterop\Portable.Imaging.AForgeInterop.csproj">
+      <Project>{70e8f840-e402-42a7-aea4-89da98a5d392}</Project>
+      <Name>Portable.Imaging.AForgeInterop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Imaging.BitmapInterop\Portable.Imaging.BitmapInterop.csproj">
+      <Project>{d6ac9240-127e-42e4-9739-fdf213a62625}</Project>
+      <Name>Portable.Imaging.BitmapInterop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Imaging.GenericImage\Portable.Imaging.GenericImage.csproj">
+      <Project>{dec42ffa-b703-485e-b38e-e5c7af938071}</Project>
+      <Name>Portable.Imaging.GenericImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Math\Portable.Math.csproj">
+      <Project>{82f52e4e-59b2-42ed-8ebe-a44be0d1536d}</Project>
+      <Name>Portable.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Imaging">
+      <HintPath>..\..\..\packages\portable.accord.imaging.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning">
+      <HintPath>..\..\..\packages\portable.accord.machinelearning.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\packages\portable.aforge.imaging.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50207\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim.Drawing">
+      <HintPath>..\..\..\packages\shim.drawing.2.2.5.50207\lib\portable-net45+netcore45+wpa81+wp8\Shim.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\AnnotationDatabase\Annotation.cs">
+      <Link>AnnotationDatabase\Annotation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\AnnotationDatabase\AnnotationDatabaseExtensions.cs">
+      <Link>AnnotationDatabase\AnnotationDatabaseExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\AnnotationDatabase\AnnotationXmlDatabaseExtensions.cs">
+      <Link>AnnotationDatabase\AnnotationXmlDatabaseExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\BagOfVisualWordsExtensions.cs">
+      <Link>BagOfVisualWordsExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\ComplexImage\ComplexImage.Arithemtics.cs">
+      <Link>ComplexImage\ComplexImage.Arithemtics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\ComplexImage\ComplexImage.FFT.cs">
+      <Link>ComplexImage\ComplexImage.FFT.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Contour\BorderFollowing.cs">
+      <Link>Contour\BorderFollowing.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Convolution\FrequencyConvolution\ParallelFFTConvolution.cs">
+      <Link>Convolution\FrequencyConvolution\ParallelFFTConvolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Convolution\ParallelConvolution.cs">
+      <Link>Convolution\ParallelConvolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Convolution\SpatialConvolution\ParallelSpatialConvolution.cs">
+      <Link>Convolution\SpatialConvolution\ParallelSpatialConvolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\CorrelationMatchingExtensions.cs">
+      <Link>CorrelationMatchingExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\DenseHistogram\DenseHistogram.Arithmetics.cs">
+      <Link>DenseHistogram\DenseHistogram.Arithmetics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\DenseHistogram\DenseHistogram.Backpropagate.cs">
+      <Link>DenseHistogram\DenseHistogram.Backpropagate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\DenseHistogram\DenseHistogram.Calculate.cs">
+      <Link>DenseHistogram\DenseHistogram.Calculate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\DenseHistogram\DenseHistogram.Core.cs">
+      <Link>DenseHistogram\DenseHistogram.Core.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\Magnitude.cs">
+      <Link>Filters\2 Source Filters\Magnitude.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\MathOperations\MathOperations.Arithmetics.cs">
+      <Link>Filters\2 Source Filters\MathOperations\MathOperations.Arithmetics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\MathOperations\MathOperations.cs">
+      <Link>Filters\2 Source Filters\MathOperations\MathOperations.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\MathOperations\MathOperations.Logic.cs">
+      <Link>Filters\2 Source Filters\MathOperations\MathOperations.Logic.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\MathOperations\MathOperations.LogicNot.cs">
+      <Link>Filters\2 Source Filters\MathOperations\MathOperations.LogicNot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\Max.cs">
+      <Link>Filters\2 Source Filters\Max.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\Min.cs">
+      <Link>Filters\2 Source Filters\Min.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\2 Source Filters\Phase.cs">
+      <Link>Filters\2 Source Filters\Phase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\Binarization\BinaryThreshold.cs">
+      <Link>Filters\Binarization\BinaryThreshold.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\Binarization\InRange.cs">
+      <Link>Filters\Binarization\InRange.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\Blend.cs">
+      <Link>Filters\Blend.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\CompassConvolution.cs">
+      <Link>Filters\CompassConvolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\EdgeDetection\Canny.cs">
+      <Link>Filters\EdgeDetection\Canny.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\EdgeDetection\Kirsh.cs">
+      <Link>Filters\EdgeDetection\Kirsh.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\EdgeDetection\Laplace.cs">
+      <Link>Filters\EdgeDetection\Laplace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\EdgeDetection\RobinsonExtensions.cs">
+      <Link>Filters\EdgeDetection\RobinsonExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\EdgeDetection\Sobel.cs">
+      <Link>Filters\EdgeDetection\Sobel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\FindNonZero.cs">
+      <Link>Filters\FindNonZero.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\GaborFilter.cs">
+      <Link>Filters\GaborFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\ContrastStretch.cs">
+      <Link>Filters\ImageEnhacement\ContrastStretch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\CorrectContrast.cs">
+      <Link>Filters\ImageEnhacement\CorrectContrast.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\Exponential.cs">
+      <Link>Filters\ImageEnhacement\Exponential.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\GrayWorld.cs">
+      <Link>Filters\ImageEnhacement\GrayWorld.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\Kuwahara.cs">
+      <Link>Filters\ImageEnhacement\Kuwahara.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\Logarithm.cs">
+      <Link>Filters\ImageEnhacement\Logarithm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\ImageEnhacement\WhitePatch.cs">
+      <Link>Filters\ImageEnhacement\WhitePatch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\NonMaximaSupression.cs">
+      <Link>Filters\NonMaximaSupression.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\Rectification.cs">
+      <Link>Filters\Rectification.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\Smooth\SmoothGaussian.cs">
+      <Link>Filters\Smooth\SmoothGaussian.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\Variance.cs">
+      <Link>Filters\Variance.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Filters\WaveletTransform.cs">
+      <Link>Filters\WaveletTransform.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\GrayLevelDifferenceMethod.cs">
+      <Link>GrayLevelDifferenceMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\GrayLevelRunLengthMatrixExtensions.cs">
+      <Link>GrayLevelRunLengthMatrixExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\IntegralImage\IntegralImageExtensions.cs">
+      <Link>IntegralImage\IntegralImageExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\IntegralImage\SquaredIntegralImageExtensions.cs">
+      <Link>IntegralImage\SquaredIntegralImageExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Interest Points\GoodFeaturesToTrack.cs">
+      <Link>Interest Points\GoodFeaturesToTrack.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Interest Points\ICornerDetectors\FastCornersDetector.cs">
+      <Link>Interest Points\ICornerDetectors\FastCornersDetector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Interest Points\ICornerDetectors\HarrisCornersDetector.cs">
+      <Link>Interest Points\ICornerDetectors\HarrisCornersDetector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Interest Points\ICornerDetectors\ICornerDetectorExtensions.cs">
+      <Link>Interest Points\ICornerDetectors\ICornerDetectorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Interest Points\IFeatureDetectorExtensions.cs">
+      <Link>Interest Points\IFeatureDetectorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Moments\CentralMoments.cs">
+      <Link>Moments\CentralMoments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Moments\HuMoments.cs">
+      <Link>Moments\HuMoments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Moments\IMoments.cs">
+      <Link>Moments\IMoments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Moments\MomentsBase.cs">
+      <Link>Moments\MomentsBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Moments\RawMoments.cs">
+      <Link>Moments\RawMoments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\MoreLinq\MoreEnumerable.ForEach.cs">
+      <Link>MoreLinq\MoreEnumerable.ForEach.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Structures\TermCriteria.cs">
+      <Link>Structures\TermCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Transform\GetRectSubPix.cs">
+      <Link>Transform\GetRectSubPix.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Transform\PyramidExtensions.cs">
+      <Link>Transform\PyramidExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Transform\Resize.cs">
+      <Link>Transform\Resize.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.Algorithms\Transform\ResizeNearsetNeighbur.cs">
+      <Link>Transform\ResizeNearsetNeighbur.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
