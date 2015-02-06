@@ -8,7 +8,7 @@
     <ProjectGuid>{DEC42FFA-B703-485E-B38E-E5C7AF938071}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Accord.Extensions.Imaging.GenericImage</RootNamespace>
+    <RootNamespace>Accord.Extensions.Imaging</RootNamespace>
     <AssemblyName>Accord.Extensions.Imaging.GenericImage</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -172,7 +172,7 @@
       <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
     </Reference>
     <Reference Include="Shim">
-      <HintPath>..\..\..\packages\shim.1.0.1.50204\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+      <HintPath>..\..\..\packages\shim.1.0.1.50207\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

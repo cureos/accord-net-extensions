@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6AC9240-127E-42E4-9739-FDF213A62625}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Extensions.Imaging</RootNamespace>
+    <AssemblyName>Accord.Extensions.Imaging.BitmapInterop</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\accord.extensions.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\Portable.Core\Portable.Core.csproj">
+      <Project>{f45893be-b481-496a-b5b7-32fb1287349e}</Project>
+      <Name>Portable.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Imaging.GenericImage\Portable.Imaging.GenericImage.csproj">
+      <Project>{dec42ffa-b703-485e-b38e-e5c7af938071}</Project>
+      <Name>Portable.Imaging.GenericImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portable.Math\Portable.Math.csproj">
+      <Project>{82f52e4e-59b2-42ed-8ebe-a44be0d1536d}</Project>
+      <Name>Portable.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50207\lib\portable-net45+netcore45+wpa81+wp8\Shim.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim.Drawing">
+      <HintPath>..\..\..\packages\shim.drawing.2.2.5.50207\lib\portable-net45+netcore45+wpa81+wp8\Shim.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\BitmapConversion.cs">
+      <Link>BitmapConversion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\BmpSaveExtensions.cs">
+      <Link>BmpSaveExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\ColorExtensions.cs">
+      <Link>ColorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\Drawing.cs">
+      <Link>Drawing.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\DrawingStructureConversions.cs">
+      <Link>DrawingStructureConversions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\ImageSaveExtensions.cs">
+      <Link>ImageSaveExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\Imaging.BitmapInterop\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
