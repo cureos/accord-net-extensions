@@ -28,6 +28,10 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using Database = System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<Accord.Extensions.Imaging.Annotation>>;
 
+#if PORTABLE
+using Path= System.IO.ShimPath;
+#endif
+
 namespace Accord.Extensions.Imaging
 {
     /// <summary>
