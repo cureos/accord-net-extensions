@@ -41,10 +41,19 @@ namespace Accord.Extensions.Imaging.Algorithms.LINE2D
         /// <param name="srcAddr">Source address.</param>
         /// <param name="dstAddr">Destination address.</param>
         /// <param name="numOfElemsToAdd">The number of elements (bytes) to add.</param>
+#if PORTABLE
+        public static void AddByteToByteVector(byte* srcAddr, byte* dstAddr, int numOfElemsToAdd)
+        {
+            for (var i = 0; i < numOfElemsToAdd; ++i)
+            {
+                *(dstAddr++) += *(srcAddr++);
+            }
+        }
+#else
         [SuppressUnmanagedCodeSecurity]
         [DllImport("SIMDArrayInstructions.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void AddByteToByteVector(byte* srcAddr, byte* dstAddr, int numOfElemsToAdd);
-
+#endif
         /// <summary>
         /// Adds two 8-bit gray images.
         /// <para>Source and destination image must have the size.</para>
@@ -89,10 +98,19 @@ namespace Accord.Extensions.Imaging.Algorithms.LINE2D
         /// <param name="srcAddr">Source address.</param>
         /// <param name="dstAddr">Destination address.</param>
         /// <param name="numOfElemsToAdd">Number of elements to add.</param>
+#if PORTABLE
+        public static void AddByteToShortVector(byte* srcAddr, short* dstAddr, int numOfElemsToAdd)
+        {
+            for (var i = 0; i < numOfElemsToAdd; ++i)
+            {
+                *(dstAddr++) += *(srcAddr++);
+            }
+        }
+#else
         [SuppressUnmanagedCodeSecurity]
         [DllImport("SIMDArrayInstructions.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void AddByteToShortVector(byte* srcAddr, short* dstAddr, int numOfElemsToAdd);
-
+#endif
         /// <summary>
         /// Adds 8-bit gray image to 16-bit destination image.
         /// <para>Source and destination image must have the size.</para>
@@ -122,6 +140,7 @@ namespace Accord.Extensions.Imaging.Algorithms.LINE2D
             }
         }
 
+#if !PORTABLE
         /// <summary>
         /// Initializes SIMD arithmetics by adding unmanaged library directory to the search path.
         /// </summary>
@@ -129,5 +148,6 @@ namespace Accord.Extensions.Imaging.Algorithms.LINE2D
         {
             Platform.AddDllSearchPath();
         }
+#endif
     }
 }
