@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A71BDC4E-3911-4B08-B3DA-6CF533D13F02}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenericImageInteropDemo</RootNamespace>
+    <AssemblyName>Net.GenericImageInteropDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50205\lib\net45\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\packages\portable.aforge.imaging.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Shim">
+      <HintPath>..\..\..\packages\shim.1.0.1.50208\lib\net45\Shim.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim.Drawing">
+      <HintPath>..\..\..\packages\shim.drawing.2.2.5.50209\lib\net45\Shim.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Imaging\GenericImageInteropDemo\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\GenericImageInteropDemo\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\GenericImageInteropDemo\Test.AForgeInterop.cs">
+      <Link>Test.AForgeInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\GenericImageInteropDemo\Test.ArrayInterop.cs">
+      <Link>Test.ArrayInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\GenericImageInteropDemo\Test.BitmapInterop.cs">
+      <Link>Test.BitmapInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Imaging\GenericImageInteropDemo\Test.OpenCVInterop.cs">
+      <Link>Test.OpenCVInterop.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\Portable\Portable.Core\Portable.Core.csproj">
+      <Project>{f45893be-b481-496a-b5b7-32fb1287349e}</Project>
+      <Name>Portable.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Portable\Portable.Imaging.AForgeInterop\Portable.Imaging.AForgeInterop.csproj">
+      <Project>{70e8f840-e402-42a7-aea4-89da98a5d392}</Project>
+      <Name>Portable.Imaging.AForgeInterop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Portable\Portable.Imaging.BitmapInterop\Portable.Imaging.BitmapInterop.csproj">
+      <Project>{d6ac9240-127e-42e4-9739-fdf213a62625}</Project>
+      <Name>Portable.Imaging.BitmapInterop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Portable\Portable.Imaging.GenericImage\Portable.Imaging.GenericImage.csproj">
+      <Project>{dec42ffa-b703-485e-b38e-e5c7af938071}</Project>
+      <Name>Portable.Imaging.GenericImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Portable\Portable.Math\Portable.Math.csproj">
+      <Project>{82f52e4e-59b2-42ed-8ebe-a44be0d1536d}</Project>
+      <Name>Portable.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -31,8 +31,14 @@ namespace GenericImageInteropDemo
     public partial class Test
     {
         public static void AForgeImToImage()
-        { 
+        {
+#if PORTABLE
+            var bmp =
+                (Bitmap)
+                new System.Windows.Media.Imaging.WriteableBitmap(640, 480, 96.0, 96.0, System.Windows.Media.PixelFormats.Bgr24, null);
+#else
             var bmp = new Bitmap(640, 480, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+#endif
             UnmanagedImage uIm = UnmanagedImage.FromManagedImage(bmp);
 
             var img = uIm.AsImage();

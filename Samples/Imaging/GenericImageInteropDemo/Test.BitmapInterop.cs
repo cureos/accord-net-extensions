@@ -54,8 +54,13 @@ namespace GenericImageInteropDemo
 
         public static void TestBitmapToImage()
         {
+#if PORTABLE
+            var bmp =
+                (Bitmap)
+                new System.Windows.Media.Imaging.WriteableBitmap(640, 480, 96.0, 96.0, System.Windows.Media.PixelFormats.Gray16, null);
+#else
             var bmp = new Bitmap(640, 480, System.Drawing.Imaging.PixelFormat.Format16bppGrayScale);
-
+#endif
             //ToImage() methods are the default way for image loading as the Image<,> is platform abstract
             //user can use other loaders such as OpenCV loader  (conversion from IplImage)
             var img = bmp.ToImage();
