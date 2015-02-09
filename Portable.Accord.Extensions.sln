@@ -10,22 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{30167C
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{80FC5EA1-3478-4E7F-8B05-190DF6750EA4}"
-	ProjectSection(SolutionItems) = preProject
-		Deployment\Licence.txt = Deployment\Licence.txt
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setup.NuGet", "Deployment\Setup.NuGet\Setup.NuGet.csproj", "{131A083D-F12A-48FA-8A7D-381C6B5C222D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logo", "Logo", "{817B040E-5F27-4ACD-B1E4-F46452668A0E}"
-	ProjectSection(SolutionItems) = preProject
-		Deployment\Logo\Accord.NET Extensions.pptx = Deployment\Logo\Accord.NET Extensions.pptx
-		Deployment\Logo\icon-big.png = Deployment\Logo\icon-big.png
-		Deployment\Logo\icon-small.png = Deployment\Logo\icon-small.png
-		Deployment\Logo\logo-big.png = Deployment\Logo\logo-big.png
-		Deployment\Logo\logo-small.png = Deployment\Logo\logo-small.png
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{5AC3FDBA-F48C-4641-B0D3-8CF80FC0F92E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.Core", "Source\Portable\Portable.Core\Portable.Core.csproj", "{F45893BE-B481-496A-B5B7-32FB1287349E}"
@@ -60,14 +44,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Release|Win32.ActiveCfg = Release|Any CPU
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D}.Release|x64.ActiveCfg = Release|Any CPU
 		{F45893BE-B481-496A-B5B7-32FB1287349E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F45893BE-B481-496A-B5B7-32FB1287349E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F45893BE-B481-496A-B5B7-32FB1287349E}.Debug|Win32.ActiveCfg = Debug|Any CPU
@@ -153,8 +129,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{131A083D-F12A-48FA-8A7D-381C6B5C222D} = {80FC5EA1-3478-4E7F-8B05-190DF6750EA4}
-		{817B040E-5F27-4ACD-B1E4-F46452668A0E} = {80FC5EA1-3478-4E7F-8B05-190DF6750EA4}
 		{F45893BE-B481-496A-B5B7-32FB1287349E} = {5AC3FDBA-F48C-4641-B0D3-8CF80FC0F92E}
 		{82F52E4E-59B2-42ED-8EBE-A44BE0D1536D} = {5AC3FDBA-F48C-4641-B0D3-8CF80FC0F92E}
 		{5DE10955-8608-42F3-86A7-2D64D0B523C0} = {5AC3FDBA-F48C-4641-B0D3-8CF80FC0F92E}
