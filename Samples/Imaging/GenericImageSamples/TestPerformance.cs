@@ -42,7 +42,7 @@ namespace GenericImage
         public static void TestConvolve(int kernelSize)
         {
 #if PORTABLE
-            var bmp = System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+            var bmp = FromFile(colorImgName, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 #else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
 #endif
@@ -72,7 +72,7 @@ namespace GenericImage
         public static void TestColorConversion()
         {
 #if PORTABLE
-            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+            var bmp = FromFile(colorImgName, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 #else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
 #endif
@@ -95,7 +95,7 @@ namespace GenericImage
         public static void TestFFT()
         {
 #if PORTABLE
-            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(FFT_sampleImgName));
+            var bmp = FromFile(FFT_sampleImgName, System.Drawing.Imaging.PixelFormat.Format8bppIndexed);
 #else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(FFT_sampleImgName);
 #endif
@@ -121,7 +121,7 @@ namespace GenericImage
         public static void TestColorFiltering()
         {
 #if PORTABLE
-            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+            var bmp = FromFile(colorImgName, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 #else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
 #endif
@@ -151,7 +151,7 @@ namespace GenericImage
         public static void TestChannelModifier()
         {
 #if PORTABLE
-            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+            var bmp = FromFile(colorImgName, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 #else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
 #endif
@@ -181,7 +181,7 @@ namespace GenericImage
         public static void TestColorCasting()
         {
 #if PORTABLE
-            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+            var bmp = FromFile(colorImgName, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 #else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
 #endif
@@ -226,5 +226,13 @@ namespace GenericImage
             else
                 Console.WriteLine("{0} is slower than {1} ~{2} times. Per call: ~{3} ms", action1Name, action2Name, (float)elapsed1 / elapsed2, (float)elapsed1 / numberOfTimes);
         }
+
+#if PORTABLE
+        private static System.Drawing.Bitmap FromFile(string fileName, System.Drawing.Imaging.PixelFormat pixelFormat)
+        {
+            var img = new System.Windows.Media.Imaging.BitmapImage(new Uri(fileName, UriKind.Relative));
+            return ((System.Drawing.Bitmap)img).Clone(pixelFormat);
+        }
+#endif
     }
 }
