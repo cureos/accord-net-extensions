@@ -31,13 +31,21 @@ namespace GenericImage
 {
     public partial class Test
     {
+#if PORTABLE
+        private static string resourceFolder = "Resources";
+#else
         static string resourceFolder = Path.Combine(new DirectoryInfo(Environment.CurrentDirectory).Parent.FullName, "Resources");
+#endif
         static string colorImgName = Path.Combine(resourceFolder, "colorBig.jpg");
         static string FFT_sampleImgName = Path.Combine(resourceFolder, "FFT-sample.bmp");
 
         public static void TestConvolve(int kernelSize)
         {
+#if PORTABLE
+            var bmp = System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+#else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
+#endif
             var smallIm = bmp.ToImage<Bgr, byte>();/*.Resize(new Size(320, 240), InterpolationMode.NearestNeighbor);*/ //AForge convolution takes too long
 
             var image = smallIm.Convert<Bgr, float>(); //do not measure converting byte->float and float->byte
@@ -63,8 +71,11 @@ namespace GenericImage
 
         public static void TestColorConversion()
         {
+#if PORTABLE
+            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+#else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
-
+#endif
             var image = bmp.ToImage<Bgr, byte>();
             UnmanagedImage uIm = UnmanagedImage.FromManagedImage(bmp);
 
@@ -83,8 +94,11 @@ namespace GenericImage
 
         public static void TestFFT()
         {
+#if PORTABLE
+            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(FFT_sampleImgName));
+#else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(FFT_sampleImgName);
-
+#endif
             var image = bmp.ToImage<Gray, byte>().Convert<Complex, float>();
             ComplexImage cuIm = ComplexImage.FromBitmap(bmp);
 
@@ -106,8 +120,11 @@ namespace GenericImage
 
         public static void TestColorFiltering()
         {
+#if PORTABLE
+            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+#else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
-
+#endif
             var image = bmp.ToImage<Bgr, byte>();
             UnmanagedImage uIm = UnmanagedImage.FromManagedImage(bmp);
 
@@ -133,8 +150,11 @@ namespace GenericImage
 
         public static void TestChannelModifier()
         {
+#if PORTABLE
+            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+#else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
-
+#endif
             var image = bmp.ToImage<Bgr, byte>();
             UnmanagedImage uIm = UnmanagedImage.FromManagedImage(bmp);
 
@@ -160,8 +180,11 @@ namespace GenericImage
 
         public static void TestColorCasting()
         {
+#if PORTABLE
+            var bmp = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(File.OpenRead(colorImgName));
+#else
             var bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(colorImgName);
-
+#endif
             var image = bmp.ToImage<Bgr, byte>();
 
             long elapsed = measure(() =>
