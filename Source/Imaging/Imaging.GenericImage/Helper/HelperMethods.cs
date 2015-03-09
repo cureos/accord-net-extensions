@@ -24,6 +24,7 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace Accord.Extensions.Imaging
 {

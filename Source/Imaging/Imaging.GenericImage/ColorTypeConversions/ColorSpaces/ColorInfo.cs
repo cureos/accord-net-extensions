@@ -137,7 +137,7 @@ namespace Accord.Extensions.Imaging
         private static void getChannelInfo(Type colorType, Type depthType, out int numberOfChannels)
         {
             numberOfChannels = 0;
-
+     
             var channelTypes = colorType
                                .GetFields(BindingFlags.Public | ~BindingFlags.Static)
                                .Select(x => x.FieldType)
