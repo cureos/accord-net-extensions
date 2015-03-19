@@ -38,38 +38,39 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accord">
-      <HintPath>..\..\..\packages\portable.accord.core.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.core.2.14.4.50319\lib\portable-net45+netcore45+wpa81\Accord.dll</HintPath>
     </Reference>
     <Reference Include="Accord.Imaging">
-      <HintPath>..\..\..\packages\portable.accord.imaging.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Imaging.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.imaging.2.14.4.50319\lib\portable-net45+netcore45+wpa81\Accord.Imaging.dll</HintPath>
     </Reference>
     <Reference Include="Accord.MachineLearning">
-      <HintPath>..\..\..\packages\portable.accord.machinelearning.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.MachineLearning.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.machinelearning.2.14.4.50319\lib\portable-net45+netcore45+wpa81\Accord.MachineLearning.dll</HintPath>
     </Reference>
     <Reference Include="Accord.Math">
-      <HintPath>..\..\..\packages\portable.accord.math.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Math.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.math.2.14.4.50319\lib\portable-net45+netcore45+wpa81\Accord.Math.dll</HintPath>
     </Reference>
     <Reference Include="Accord.Statistics">
-      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.0.50204\lib\portable-net45+netcore45+wpa81+wp8\Accord.Statistics.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.accord.statistics.2.14.4.50319\lib\portable-net45+netcore45+wpa81\Accord.Statistics.dll</HintPath>
     </Reference>
     <Reference Include="AForge">
-      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50205\lib\net45\AForge.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.aforge.core.2.2.5.50319\lib\net45\AForge.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Imaging">
-      <HintPath>..\..\..\packages\portable.aforge.imaging.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Imaging.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.aforge.imaging.2.2.5.50319\lib\portable-net45+netcore45+wpa81\AForge.Imaging.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Math">
-      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50204\lib\portable-net45+netcore45+wpa81+wp8\AForge.Math.dll</HintPath>
+      <HintPath>..\..\..\packages\portable.aforge.math.2.2.5.50319\lib\portable-net45+netcore45+wpa81\AForge.Math.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="Shim">
-      <HintPath>..\..\..\packages\shim.1.0.1.50208\lib\net45\Shim.dll</HintPath>
+      <HintPath>..\..\..\packages\shim.1.0.1.50318\lib\net45\Shim.dll</HintPath>
     </Reference>
     <Reference Include="Shim.Drawing">
-      <HintPath>..\..\..\packages\shim.drawing.2.2.5.50209\lib\net45\Shim.Drawing.dll</HintPath>
+      <HintPath>..\..\..\packages\shim.drawing.2.2.5.50319\lib\net45\Shim.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
